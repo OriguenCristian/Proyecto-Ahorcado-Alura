@@ -1,3 +1,6 @@
+body{
+    background-image: url(/Multimedia/hoja-papel.jfif);
+}
 /*estilos del index*/
 header .logoImg{
     position: absolute;
@@ -58,6 +61,7 @@ header .logoImg img{
     font-size: 32px;    
     line-height: 150%;
     border: none;
+    background-color: transparent;
 }
 
 .textoIng:focus-visible{
@@ -96,4 +100,19 @@ header .logoImg img{
     font-size: 16px;
     line-height: 19px;
     color: #0A3871;
+}
+main .infoContenedor{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 420px;
+    top: 450px;
+}
+main .infoContenedor span{
+    color: #495057;
+    opacity: 0.8;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+
 }
