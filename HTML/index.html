@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/Stayle.css">
+    <title>Ahorcado Challenge Alura</title>
+</head>
+<body>
+    <header>
+        <div class="logoImg">
+            <img src="../Multimedia/logo.svg" alt="Logo Alura">
+        </div>
+    </header>
+    <main>
+    <!-- boton deinicio del juego -->
+        <div id="Desaparece" class="botonesHome">
+            <a class="btnEnlace" href="#">
+                <button class="btnInicioJuego" id="inicioJuego" onclick="iniciarJuego()">Iniciar juego </button>
+            </a>
+            <a href="../HTML/ingresarPalabra.html">
+                <button class="btnIngresarPalabra" id="ingresarPalabra"> Ingresar Palabra</button>
+            </a>
+        </div>
+    <!-- espacio donde aparece el dibujo -->
+        <div id="apareceAhorcado" class="canvas">
+            <canvas id="ahorcadoTablero" width="1200" height="860"></canvas>
+             <div class="subrayado">
+                
+            </div>
+        </div>
+    </main>
+    
+    
+</body>
+<script src="../JS/index.js"></script>
+<script src="../JS/canvas.js"></script>
+</html>
