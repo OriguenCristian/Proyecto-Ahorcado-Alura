@@ -1,6 +1,5 @@
 let palabras = ["ALURA","ORACLE","ONE","HTML","MADRE","ALEGRIA","PULGA"];
-let tablero = document.getElementById("ahorcadoTablero").getContext("2d");
-
+let tablero = document.getElementById("canvas").getContext("2d");
 let palabraSecreta = "";
 
 //iniciar Juego conel boton
@@ -9,7 +8,6 @@ function iniciarJuego(){
 
     palabraSecretaAleatoria();
     canvasDibujo();
-    dibujarLinea();
 }
 
 function palabraSecretaAleatoria(){
