@@ -4,11 +4,24 @@
 
 }
 body{
+    height: 100vh;
+    width: 100vw;
     font-family:'Shadows Into Light Two', cursive;
-
-
     background-image: url(/Multimedia/hoja-papel.jfif);
 }
+/*Estilos footer*/
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin: 0px auto;
+    padding: 1em;
+    height: 90vh;
+    width: 90vw;
+}
+
 /*estilos del index*/
 header .logoImg{
     position: absolute;
@@ -24,46 +37,52 @@ header .logoImg img{
     top: 0%;
     bottom: 0%;
 }
+.botonesHome{
+    display: flex;
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    margin: 0px auto;
+    justify-content: center
+}
 .botonesHome .btnInicioJuego{
-    width: 317px;
-    height: 114px;
-    position: absolute;
-    left: 561px;
-    top: 402px;   
+    width: 300px;
+    height: 100px;
+    margin: 0.5rem;
     background: #0A3871;
     border: none;
-    border-radius: 24px;
+    border-radius: 60px;
     cursor: pointer;
     color: aliceblue;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1.5rem;
 }
-.botonesHome .btnIngresarPalabra{
-    
-    position: absolute;
-    width: 280px;
-    height: 67px;
-    left: 579px;
-    top: 554px;
+.botonesHome .btnIngresarPalabra{   
+    width: 240px;
+    height: 70px;
+    margin: 0.5rem;
     cursor: pointer;
     border: 1px solid #0A3871;
-    border-radius: 24px;
+    border-radius: 60px;
     color: #0A3871;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
 }
-/*estilo pag IngresarPalabra*/
-.mainIngresarPag{
 
+/*estilo pag IngresarPalabra*/
+.texContenedor{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .textoIng{
-    position: absolute;
     width: 299px;
     height: 48px;
-    left: 376px;    
-    top: 170px;
     font-style: normal;
     font-weight: 400;
     font-size: 32px;    
@@ -71,27 +90,22 @@ header .logoImg img{
     border: none;
     background-color: transparent;
 }
-
 .textoIng:focus-visible{
     outline: none;
 }
 .btnContenedor{
-    position: absolute;
-    width: 450px;
-    height: 67px;
-    left: 376px;    
-    top: 490px;
+    width: 100%;
+    height: 5rem;   
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
+    align-items: center;
+    justify-content: center;
     gap: 24px;
 }
 .btnGuardaPalabra{
     width: 332px;
     height: 67px;
     background: #0A3871;
-    border-radius: 24px;
+    border-radius: 60px;
     color: aliceblue;
     border: none;
     cursor: pointer;
@@ -102,7 +116,7 @@ header .logoImg img{
 .btnCancelar{
     width: 332px;
     height: 67px;
-    border-radius: 24px;
+    border-radius: 60px;
     border-color: #0A3871;
     font-weight: 400;
     font-size: 16px;
@@ -110,18 +124,26 @@ header .logoImg img{
     color: #0A3871;
     cursor: pointer;
 }
-main .infoContenedor{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    left: 420px;
-    top: 450px;
+.infoContenedor{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 1.5rem;
 }
-main .infoContenedor span{
+.infoContenedor span{
     color: #495057;
     opacity: 0.8;
     font-weight: 400;
     font-size: 15px;
     line-height: 150%;
 
+}
+/*Estilos pag InicioJuego*/
+
+.canvasContenedor{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 80%;
+    margin: 0px auto;
 }

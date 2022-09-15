@@ -16,23 +16,28 @@
         </div>
     </header>
     <main>
-
-        <div id="apareceAhorcado" class="canvasContenedor">
-            <canvas id="canvas" width="600" height="400"></canvas>
-            
+        <div class="container">
+            <div id="apareceAhorcado" class="canvasContenedor">
+                 <canvas id="canvas" width="600" height="400"></canvas>
             <div class="subrayado">  
             </div>
+            </div>
+
+            <div class="btnContenedor">
+                <a href="/index.html">
+                    <button class="btnGuardaPalabra" id="guardarPalabraIn">Nuevo Juego</button>
+                </a>
+                <a href="/index.html">
+                    <button class="btnCancelar" id="">Rendirse</button>
+                </a>
+            </div>
+    </div>
+    </main>
+    <footer>
+        <div class="foot">
+         <Span> &#169;	 Cristian Origuen 2022</Span>
         </div>
-        <div class="btnContenedor">
-            <a href="/index.html">
-                <button class="btnGuardaPalabra" id="guardarPalabraIn">Nuevo Juego</button>
-            </a>
-    
-            <a href="/index.html">
-                <button class="btnCancelar" id="">Rendirse</button>
-            </a>
-        </div>
-    </main>    
+    </footer>       
 </body>
 <script src="/Proyecto-Ahorcado-Alura/JS/index.js"></script>
 <script src="/Proyecto-Ahorcado-Alura/JS/canvas.js"></script>
