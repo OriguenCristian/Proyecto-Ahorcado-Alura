@@ -4,10 +4,10 @@
 
 }
 body{
-    height: 100vh;
-    width: 100vw;
+    width:100%; 
+    min-height:100%;
     font-family:'Shadows Into Light Two', cursive;
-    background-image: url(/Multimedia/hoja-papel.jfif);
+    background-image: url(../Multimedia/hoja-papel.jfif);
     background-repeat:no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -16,6 +16,10 @@ body{
 footer{
     display: flex;
     justify-content: center;
+}
+.linkd img ,.gitHub img{
+    width: 3rem;
+    height: 3rem;
 }
 
 .container{
@@ -51,27 +55,41 @@ header .logoImg img{
     justify-content: center
 }
 .botonesHome .btnInicioJuego{
-    width: 300px;
-    height: 100px;
-    margin: 0.5rem;
-    background: #0A3871;
-    border: none;
-    border-radius: 60px;
-    cursor: pointer;
-    color: aliceblue;
-    font-weight: 400;
-    font-size: 1.5rem;
+    align-self:center;
+    background:transparent;
+    padding:1rem 1rem;
+    margin:0.6rem;
+    transition:all .5s ease;
+    color:#41403E;
+    font-size:1.5rem;
+    letter-spacing:1px;
+    outline:none;
+    box-sizing:border-box;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border-color: red;
 }
 .botonesHome .btnIngresarPalabra{   
-    width: 240px;
-    height: 70px;
-    margin: 0.5rem;
-    cursor: pointer;
-    border: 1px solid #0A3871;
-    border-radius: 60px;
-    color: #0A3871;
-    font-weight: 400;
-    font-size: 1rem;
+    background:transparent;
+    padding:1rem 1rem;
+    margin:0.6rem;
+    transition:all .5s ease;
+    color:#41403E;
+    font-size:1.5rem;
+    letter-spacing:1px;
+    outline:none;
+    box-sizing:border-box;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border-color: red;
+}
+.btnIngresarPalabra:hover{
+    box-shadow:2px 8px 4px -6px
+     hsla(0,0%,0%,.3);
+}
+.btnInicioJuego:hover{
+    box-shadow:2px 8px 4px -6px
+     hsla(0,0%,0%,.3);
 }
 
 /*estilo pag IngresarPalabra*/
@@ -105,28 +123,43 @@ header .logoImg img{
     gap: 24px;
 }
 .btnGuardaPalabra{
-    width: 300px;
-    height: 70px;
-    background: #0A3871;
-    border-radius: 60px;
-    color: aliceblue;
-    border: none;
-    cursor: pointer;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    background:transparent;
+    padding:1rem 1rem;
+    margin:0.6rem;
+    transition:all .5s ease;
+    color:#41403E;
+    font-size:1.5rem;
+    letter-spacing:1px;
+    outline:none;
+    box-sizing:border-box;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border-color: red;
 }
+.btnGuardaPalabra:hover{
+    box-shadow:2px 8px 4px -6px
+     hsla(0,0%,0%,.3);
+}
+
 .btnCancelar{
-    width: 300px;
-    height: 70px;
-    border-radius: 60px;
-    border-color: #0A3871;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #0A3871;
-    cursor: pointer;
+    background:transparent;
+    padding:1rem 1rem;
+    margin:0.6rem;
+    transition:all .5s ease;
+    color:#41403E;
+    font-size:1.5rem;
+    letter-spacing:1px;
+    outline:none;
+    box-sizing:border-box;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border-color: red;
 }
+.btnCancelar:hover{
+    box-shadow:2px 8px 4px -6px
+     hsla(0,0%,0%,.3);
+}
+
 .infoContenedor{
     display: flex;
     justify-content: center;
@@ -151,26 +184,40 @@ header .logoImg img{
     margin: 0px auto;
 }
 .btnNuevJuego{
-    width: 300px;
-    height: 70px;
-    background: #0A3871;
-    border-radius: 60px;
-    color: aliceblue;
-    border: none;
-    cursor: pointer;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    background:transparent;
+    padding:1rem 1rem;
+    margin:0.6rem;
+    transition:all .5s ease;
+    color:#41403E;
+    font-size:1.5rem;
+    letter-spacing:1px;
+    outline:none;
+    box-sizing:border-box;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border-color: red;   
    
 }
+.btnNuevJuego:hover{
+    box-shadow:2px 8px 4px -6px
+     hsla(0,0%,0%,.3);
+}
+
 .btnRendirse{
-    width: 300px;
-    height: 70px;
-    margin: 0.5rem;
-    cursor: pointer;
-    border: 1px solid #0A3871;
-    border-radius: 60px;
-    color: #0A3871;
-    font-weight: 400;
-    font-size: 1rem;
+    background:transparent;
+    padding:1rem 1rem;
+    margin:0.6rem;
+    transition:all .5s ease;
+    color:#41403E;
+    font-size:1.5rem;
+    letter-spacing:1px;
+    outline:none;
+    box-sizing:border-box;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border-color: red;
+}
+.btnRendirse:hover{
+    box-shadow:2px 8px 4px -6px
+     hsla(0,0%,0%,.3);
 }
