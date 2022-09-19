@@ -179,12 +179,15 @@ header .logoImg img{
 }
 /*Estilos pag InicioJuego*/
 
-.canvasContenedor{
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    height: 80%;
-    margin: 0px auto;
+
+#palabraSecreta > span{
+    vertical-align: bottom;
+    font-size: 2em;
+    border-bottom: 2px solid red;
+    width: 30px;
+    margin-right: 6px;
+    text-align: center;
+    display: inline-block;
 }
 .btnNuevJuego{
     background:transparent;
