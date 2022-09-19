@@ -1,3 +1,4 @@
+let tablero = document.getElementById("canvas").getContext("2d");
 function canvasDibujo(){
     tablero.lineWidth = 8;
     tablero.lineCap ="round";
@@ -5,7 +6,7 @@ function canvasDibujo(){
     tablero.fillStyle = "#f3f5f6"
     tablero.strokeStyle = "#8a3471"
 
-    tablero.fillRect(0,0,1200,860);
+    tablero.fillRect(0,0,500,400);
     tablero.beginPath();
     tablero.moveTo(650,500);
     tablero.lineTo(900,500);
