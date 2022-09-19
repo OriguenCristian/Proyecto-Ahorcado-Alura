@@ -12,4 +12,3 @@ function palabraSecretaAleatoria(){
 function iniciarJuego(){
     palabraSecretaAleatoria();
 }
-iniciarJuego()
