@@ -179,7 +179,28 @@ header .logoImg img{
 }
 /*Estilos pag InicioJuego*/
 
-
+.containerRwap{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+.containerJuego{
+    display: grid;
+    align-content: stretch;
+    align-items: flex-end;
+    justify-content: center;
+    justify-items: center;
+}
+#teclado{
+    display: flex;
+    flex-wrap: wrap;
+    width: 14rem;
+}
+#teclado button{
+    width: 2rem;
+    height: 2rem;
+}
 #palabraSecreta > span{
     vertical-align: bottom;
     font-size: 2em;
