@@ -1,19 +1,31 @@
 const palabras=["ALURA","ORACLE","ONE","HTML","MADRE","ALEGRIA","PULGA"];
 let palabraSecreta = "";
-const vidas = 8;
+let vidas = 8;
+let acertadas = 0;
 
 function id(str){
     return document.getElementById(str);    
 }
 
-//geEnerar palabra aleatoria e inicio el juego
+//iniciar Juego conel boton INICIAR JUE
+function iniciarJuego(){
+    palabraSecretaAleatoria();
+    vidas = 8;
+    acertadas = 0;
+
+    
+
+    console.log(palabraSecreta)
+}
+
+//geEnerar palabra aleatoria e introduce as lineas de la cantidad de letras de la palabra.
 function palabraSecretaAleatoria(){
     
     let parrafo = id("palabraSecreta");
     parrafo.innerHTML = "";
 
-    let palabra = palabras[Math.floor(Math.random() * palabras.length)];
-    palabraSecreta = palabra;
+    let palabraRandom = palabras[Math.floor(Math.random() * palabras.length)];
+    palabraSecreta = palabraRandom;
 
     let cantLetra =palabraSecreta.length;
 
@@ -22,12 +34,8 @@ function palabraSecretaAleatoria(){
         parrafo.appendChild(span);
     }
 }
-//iniciar Juego conel boton INICIAR JUE
-function iniciarJuego(){
-    palabraSecretaAleatoria();
-    console.log(palabraSecreta)
-}
-//funcion Para el teclado
+
+//funcion Para el teclado y comparacion de las teclas presionadas con las palabras 
 
 const btnTeclado = document.querySelectorAll("#teclado .tecla");
     for (let i = 0; i < btnTeclado.length; i++){
@@ -45,6 +53,7 @@ function clickTeclado(event){
     for(let i = 0; i < palabraSecrMayus.length; i++){
         if ( letraPresionada == palabraSecrMayus[i]){
             palabraPresionada[i].innerHTML =letraPresionada;
+            acertadas++;
             acerto = true;
         }
     }
