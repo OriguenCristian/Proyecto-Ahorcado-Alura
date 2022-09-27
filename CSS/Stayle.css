@@ -96,6 +96,10 @@ header .logoImg img{
 }
 
 /*estilo pag IngresarPalabra*/
+form{
+    height: inherit;
+    width: inherit;
+}
 .texContenedor{
     display: flex;
     width: 100%;
