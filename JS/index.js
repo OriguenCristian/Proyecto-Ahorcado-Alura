@@ -15,10 +15,7 @@ let letras =[];
 function id(str){
     return document.getElementById(str);    
 }
- function teclado(){
-   let teclaPresionada = teclaPresionada.addEventListener("keydown", function(event)
 
- }
 //iniciar Juego conel boton INICIAR JUE
 function iniciarJuego(){
     btnNuevoJuego.disabled=true;
