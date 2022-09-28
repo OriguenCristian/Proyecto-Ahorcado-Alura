@@ -2,18 +2,13 @@ const palabras=["ALURA","ORACLE","ONE","HTML","MADRE","ALEGRIA","PULGA"];
 const btnTeclado = document.querySelectorAll("#teclado .tecla");
 const btnInicioJuego =document.getElementById("btnInioJuego");
 const btnNuevoJuego = document.getElementById("btnNuevoJuego");
-const btnGuardarPalabraIn = document.getElementById("guardarPalabraIn");
-
-btnGuardarPalabraIn.addEventListener("click", guardarPalabra)
 
 btnNuevoJuego.addEventListener("click", iniciarJuego);
-
+let palabraIgresada = "";
 let palabraSecreta = "";
 let vidas = 8;
 let acertadas = 0;
-let textIngresado = document.getElementById("textIngresado").value;
 
-   
 function id(str){
     return document.getElementById(str);    
 }
@@ -90,9 +85,9 @@ function  finJuego(){
      btnNuevoJuego.disabled= false;
      
 };
-
-function guardarPalabra(){
-
-    console.log(textIngresado)
- 
+const guardarPalabra = () =>{
+    let textIngresado = document.getElementById("textIngresado").value;
+    palabraIgresada  = textIngresado;
+    
+    console.log(palabraIgresada)
 }
