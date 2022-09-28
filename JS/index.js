@@ -19,6 +19,7 @@ function iniciarJuego(){
     btnNuevoJuego.disabled=true;
     tecladoP()
     palabraSecretaAleatoria();
+    crearLineas();
     vidas = 0;
     acertadas = 0;
     console.log(palabraSecreta);
@@ -29,13 +30,14 @@ function iniciarJuego(){
 }
 //geEnerar palabra aleatoria e introduce as lineas de la cantidad de letras de la palabra.
 function palabraSecretaAleatoria(){
-    
-    let parrafo = id("palabraSecreta");
-    parrafo.innerHTML = "";
-
     let palabraRandom = palabras[Math.floor(Math.random() * palabras.length)];
     palabraSecreta = palabraRandom;
+}
 
+//Genera las lineas segun la cantidad de letras. ingresando un span en el html.
+function crearLineas(){
+    let parrafo = id("palabraSecreta");
+    parrafo.innerHTML = "";
     let cantLetra =palabraSecreta.length;
 
     for( let i = 0; i < cantLetra; i++){
@@ -69,7 +71,7 @@ function clickTeclado(event){
     if (acerto == false){
         vidas++;
     }
-    if (vidas == 7){
+    if (vidas == 8){
         alert("perdiste la palabra era" + palabraSecreta);
         finJuego()
     }
