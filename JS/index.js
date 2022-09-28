@@ -3,6 +3,8 @@ const btnTeclado = document.querySelectorAll("#teclado .tecla");
 const btnInicioJuego =document.getElementById("btnInioJuego");
 const btnNuevoJuego = document.getElementById("btnNuevoJuego");
 
+const imagen = id("imagen");
+
 btnNuevoJuego.addEventListener("click", iniciarJuego);
 
 let palabraIgresada = "";
@@ -16,6 +18,7 @@ function id(str){
 
 //iniciar Juego conel boton INICIAR JUE
 function iniciarJuego(){
+    imagen.src = `../Multimedia/img0.png`
     btnNuevoJuego.disabled=true;
     tecladoP()
     palabraSecretaAleatoria();
@@ -70,8 +73,10 @@ function clickTeclado(event){
     }
     if (acerto == false){
         vidas++;
+        const Srce = `../Multimedia/img${vidas}.png`;        
+        imagen.src = Srce;
     }
-    if (vidas == 8){
+    if (vidas == 7){
         alert("perdiste la palabra era" + palabraSecreta);
         finJuego()
     }
