@@ -84,5 +84,4 @@ function  finJuego(){
         btnTeclado[i].disabled = true;
      } 
      btnNuevoJuego.disabled= false;
-     
 };
