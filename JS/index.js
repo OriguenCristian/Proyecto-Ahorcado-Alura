@@ -4,6 +4,7 @@ const btnInicioJuego =document.getElementById("btnInioJuego");
 const btnNuevoJuego = document.getElementById("btnNuevoJuego");
 
 btnNuevoJuego.addEventListener("click", iniciarJuego);
+
 let palabraIgresada = "";
 let palabraSecreta = "";
 let vidas = 8;
@@ -85,9 +86,3 @@ function  finJuego(){
      btnNuevoJuego.disabled= false;
      
 };
-const guardarPalabra = () =>{
-    let textIngresado = document.getElementById("textIngresado").value;
-    palabraIgresada  = textIngresado;
-    
-    console.log(palabraIgresada)
-}
