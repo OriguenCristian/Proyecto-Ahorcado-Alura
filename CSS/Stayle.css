@@ -209,22 +209,32 @@ form{
   
   .modal {
     background-color: #fff;
-    width: 600px;
+    width: 20rem;
     max-width: 100%;
-    padding: 30px 50px;
+    padding: 3rem 2rem;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
     text-align: center;
-  }
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
   
-  .modal h1 {
-    margin: 0;
-  }
+  .modal #close{
+    margin: 1rem;
+    padding: 0.5rem;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 20px 38px 34px -26px rgb(0 0 0 / 54%);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border-color: red;
+    cursor: pointer;
+}
   
   .modal p {
-    opacity: 0.7;
-    font-size: 14px;
-  }
+    opacity: 0.8;
+    font-size: 1.5rem;
+ }
 
 .containerRwap{
     display: flex;

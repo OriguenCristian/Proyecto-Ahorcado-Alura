@@ -6,6 +6,7 @@ const modal_container = document.getElementById('modal_container');
 const close = document.getElementById('close');
 
 const imagen = id("imagen");
+const lottie = id("lottieVideo")
 
 let palabraIgresada = "";
 let palabraSecreta = "";
@@ -19,6 +20,7 @@ function id(str){
 
 //iniciar Juego conel boton juegonuevo
 function iniciarJuego(){
+   
     imagen.src = `../Multimedia/img0.png`
     btnNuevoJuego.disabled=true;
     tecladoP()
@@ -99,10 +101,12 @@ function  finJuego(){
 function mostrar(){
     let ganaste = "Felicidades Ganaste";
     let perdio = "Perdiste, la palabra secreta era " + palabraSecreta;
-    if(vidas = 8){       
-        modal_container.classList.add('show');
+    if(vidas = 8){  
+
+        modal_container.classList.add('show');        
         let mensaje = id("mensaje");
         mensaje.innerHTML = perdio;
+        lottie.src = "/Multimedia/99490-skull.mp4";
       
       close.addEventListener('click', () => {
         modal_container.classList.remove('show');
@@ -111,6 +115,7 @@ function mostrar(){
         modal_container.classList.add('show');
         let mensaje = id("mensaje");
         mensaje.innerHTML = ganaste;
+        lottie.src ="/Multimedia/50743-best.mp4";
 
       close.addEventListener('click', () => {
         modal_container.classList.remove('show');
