@@ -2,10 +2,10 @@ const palabras=["ALURA","ORACLE","ONE","HTML","MADRE","ALEGRIA","PULGA"];
 const btnTeclado = document.querySelectorAll("#teclado .tecla");
 const btnInicioJuego =document.getElementById("btnInioJuego");
 const btnNuevoJuego = document.getElementById("btnNuevoJuego");
+const modal_container = document.getElementById('modal_container');
+const close = document.getElementById('close');
 
 const imagen = id("imagen");
-
-btnNuevoJuego.addEventListener("click", iniciarJuego);
 
 let palabraIgresada = "";
 let palabraSecreta = "";
@@ -16,14 +16,15 @@ function id(str){
     return document.getElementById(str);    
 }
 
-//iniciar Juego conel boton INICIAR JUE
+
+//iniciar Juego conel boton juegonuevo
 function iniciarJuego(){
     imagen.src = `../Multimedia/img0.png`
     btnNuevoJuego.disabled=true;
     tecladoP()
     palabraSecretaAleatoria();
     crearLineas();
-    vidas = 0;
+    vidas = 1;
     acertadas = 0;
     console.log(palabraSecreta);
     const btnTeclado = document.querySelectorAll("#teclado .tecla");
@@ -72,19 +73,21 @@ function clickTeclado(event){
         }
     }
     if (acerto == false){
-        vidas++;
         const Srce = `../Multimedia/img${vidas}.png`;        
         imagen.src = Srce;
+        vidas++;
     }
-    if (vidas == 7){
-        alert("perdiste la palabra era" + palabraSecreta);
+    if (vidas == 8){
         finJuego()
+        mostrar();
+       
     }
      else if (acertadas == palabraSecreta.length){
-    alert("felicidades ganaste");
+        mostrar()
     finJuego() 
     }
 }
+//funcion que cierra el teclado y restable elboton de juego nuevo.
 function  finJuego(){
     const btnTeclado = document.querySelectorAll("#teclado .tecla");
     for (let i = 0; i < btnTeclado.length; i++){
@@ -92,3 +95,25 @@ function  finJuego(){
      } 
      btnNuevoJuego.disabled= false;
 };
+//muestra la ventana modal que anuncia si gano o Perdio
+function mostrar(){
+    let ganaste = "Felicidades Ganaste";
+    let perdio = "Perdiste, la palabra secreta era " + palabraSecreta;
+    if(vidas = 8){       
+        modal_container.classList.add('show');
+        let mensaje = id("mensaje");
+        mensaje.innerHTML = perdio;
+      
+      close.addEventListener('click', () => {
+        modal_container.classList.remove('show');
+      });
+    } if (acertadas == palabraSecreta.length){
+        modal_container.classList.add('show');
+        let mensaje = id("mensaje");
+        mensaje.innerHTML = ganaste;
+
+      close.addEventListener('click', () => {
+        modal_container.classList.remove('show');
+     })
+    }
+}
