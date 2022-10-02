@@ -106,7 +106,7 @@ function mostrar(){
         modal_container.classList.add('show');        
         let mensaje = id("mensaje");
         mensaje.innerHTML = perdio;
-        lottie.src = "/Multimedia/99490-skull.mp4";
+        lottie.src = "./Multimedia/99490-skull.mp4";
       
       close.addEventListener('click', () => {
         modal_container.classList.remove('show');
@@ -115,7 +115,7 @@ function mostrar(){
         modal_container.classList.add('show');
         let mensaje = id("mensaje");
         mensaje.innerHTML = ganaste;
-        lottie.src ="/Multimedia/50743-best.mp4";
+        lottie.src ="./Multimedia/50743-best.mp4";
 
       close.addEventListener('click', () => {
         modal_container.classList.remove('show');
