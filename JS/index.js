@@ -58,7 +58,7 @@ function tecladoP(){
     btnTeclado[i].addEventListener( "click", clickTeclado);
     }
  }
-
+//compara el caracter en el boton presionado, con la palabra secreta. la convuerte en mayuscula y si la acerta la pone en el lugar correto.
 function clickTeclado(event){
     let palabraSelec = document.querySelectorAll("#palabraSecreta span");
     const button = event.target;

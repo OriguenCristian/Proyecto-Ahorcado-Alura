@@ -157,7 +157,7 @@ form{
 
 .btnCancelar{
     background:transparent;
-    padding:1rem 1rem;
+    padding:1.2rem 1rem;
     margin:0.6rem;
     transition:all .5s ease;
     color:#41403E;
@@ -167,6 +167,8 @@ form{
     box-sizing:border-box;
     box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border: solid 2.8px;
+    text-decoration: none;
     border-color: red;
     cursor: pointer;
 }
