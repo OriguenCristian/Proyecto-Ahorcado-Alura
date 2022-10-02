@@ -23,7 +23,7 @@
 
         width: auto;
         height: auto;
-        margin: 0.5px;
+        margin: 1px;
     }
     .btnContenedor {
         justify-content: flex-start;
