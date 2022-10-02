@@ -3,9 +3,16 @@
     .containerRwap{
         flex-direction: column;
     }
+    .apareceHorca{
+        width: 100%;
+    }
+    .containerJuego{
+        width: 100%;
+    }
     #teclado{
         margin: 0rem;
         width: initial;
+        align-content: center;
     }
     #teclado button {
         font-size: xx-small;
@@ -37,10 +44,16 @@
     
     footer{
         width: max-content;
+        height: 145px;
+        margin: 0px auto;
     }
 
     .containerFoot{
         display: flex;
         flex-direction: column;
         align-items: center;}
+
+        .modal{
+            margin: 160px auto;
+        }
 }

@@ -4,7 +4,7 @@
 
 }
 body,html{
-    width:100%; 
+    width:100vw; 
     height: 100vh;
     font-family:'Shadows Into Light Two', cursive;
     background-image: url(../Multimedia/hoja-papel.jfif);
@@ -12,6 +12,12 @@ body,html{
     background-attachment: fixed;
     background-size: cover;
 }
+main{
+    width:  90vw;
+    height: 90vh;
+    margin: 0px auto;
+}
+
 /*Estilos footer*/
 footer{
     height: 1rem;
@@ -26,9 +32,7 @@ footer{
 }
 
 .container{
-    display: flex;
-    margin: 0px auto;
-    padding: 1em;
+    margin: 20px auto;
     height: 85vh;
     width: 90vw;
 }
@@ -238,10 +242,10 @@ form{
 
 .containerRwap{
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
+    width: 90%;
+    height: 90%;
     margin: 0px auto;
+    justify-content: space-between;
 }
 .containerJuego{
     width: 55%;
@@ -251,12 +255,13 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    align-content: center;
 }
 .apareceHorca{
     display: grid;
     width: 45%;
-    height: 95%;
-    align-items: end;
+    height: 90%;
+    align-items: flex-end;
     justify-content: center;
 }
 .apareceHorca img{
@@ -276,7 +281,7 @@ form{
     flex-wrap: wrap;
     width: 22rem;
     height: 8rem;
-    margin: 4rem;
+    margin: 2rem;
     justify-content: center;
     align-content: flex-end;
 }
