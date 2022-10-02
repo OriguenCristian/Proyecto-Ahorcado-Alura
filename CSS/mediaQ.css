@@ -1,3 +1,46 @@
-@media (max-wi){
+@media (max-width: 720px){
 
+    .containerRwap{
+        flex-direction: column;
+    }
+    #teclado{
+        margin: 0rem;
+        width: initial;
+    }
+    #teclado button {
+        font-size: xx-small;
+
+        width: auto;
+        height: auto;
+        margin: 0.5px;
+    }
+    .btnContenedor {
+        justify-content: flex-start;
+        height: 12rem;
+        gap: 0px;
+        flex-direction: column;
+    }
+    
+    .btnNuevJuego{
+        
+            font-size: inherit;
+            margin: 7px;
+            padding: 6px;
+        
+    }
+    .btnRendirse{
+        font-size: inherit;
+            margin: 7px;
+            padding: 6px;
+
+    }
+    
+    footer{
+        width: max-content;
+    }
+
+    .containerFoot{
+        display: flex;
+        flex-direction: column;
+        align-items: center;}
 }
