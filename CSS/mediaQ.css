@@ -6,6 +6,10 @@
     .apareceHorca{
         width: 100%;
     }
+    .apareceHorca img {
+        width: 100%;
+        height: 60%;
+    }
     .containerJuego{
         width: 100%;
     }
@@ -15,7 +19,7 @@
         align-content: center;
     }
     #teclado button {
-        font-size: small;
+        font-size: large;
 
         width: auto;
         height: auto;
@@ -30,13 +34,13 @@
     
     .btnNuevJuego{
         
-            font-size: inherit;
+            font-size: x-large;
             margin: 9px;
             padding: 8px;
         
     }
     .btnRendirse{
-        font-size: inherit;
+        font-size: x-large;
             margin: 9px;
             padding: 8px;
 
