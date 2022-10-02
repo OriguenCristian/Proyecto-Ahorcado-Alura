@@ -15,7 +15,7 @@
         align-content: center;
     }
     #teclado button {
-        font-size: xx-small;
+        font-size: small;
 
         width: auto;
         height: auto;
@@ -31,14 +31,14 @@
     .btnNuevJuego{
         
             font-size: inherit;
-            margin: 7px;
-            padding: 6px;
+            margin: 9px;
+            padding: 8px;
         
     }
     .btnRendirse{
         font-size: inherit;
-            margin: 7px;
-            padding: 6px;
+            margin: 9px;
+            padding: 8px;
 
     }
     

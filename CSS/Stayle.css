@@ -23,6 +23,7 @@ footer{
     height: 1rem;
     display: flex;
     justify-content: center;
+    margin: 0px auto;
     align-items: center;
 }
 .linkd img ,.gitHub img{
