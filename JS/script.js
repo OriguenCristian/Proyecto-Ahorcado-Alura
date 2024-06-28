@@ -1,64 +1,77 @@
-const palabras=["ALURA","ORACLE","ONE","HTML","MADRE","ALEGRIA","PULGA"];
+const palabras = ["dormir", "cantante", "reloj","trabajo","relleno","anime","patagonia","viaje","avion","barco","motoneta","espacio","jedi","galaxia","guerra"]
+
 const btnTeclado = document.querySelectorAll("#teclado .tecla");
 const btnInicioJuego =document.getElementById("btnInioJuego");
 const btnNuevoJuego = document.getElementById("btnNuevoJuego");
-const modal_container = document.getElementById('modal_container');
+const btnGuardarPalabra = document.getElementById("guardarPalabraIn");
+const inputPalabraIngresada = document.getElementById("textIngresado");
+const modalContainer = document.getElementById('modal_container');
 const close = document.getElementById('close');
-
+const parrafo = document.getElementById("palabraSecreta");
 const imagen = id("imagen");
 const lottie = id("lottieVideo")
+ 
 
-let palabraIgresada = "";
+let palabraIgresada = localStorage.getItem("palabra");
 let palabraSecreta = "";
 let vidas = 8;
 let acertadas = 0;
+   
 
 function id(str){
     return document.getElementById(str);    
 }
-
-
+const guardarPalabraLocal =  () =>{
+    const textoIng = inputPalabraIngresada.value
+    localStorage.setItem("palabra",textoIng)
+    console.log(typeof palabraIgresada)
+}
 //iniciar Juego conel boton juegonuevo
 function iniciarJuego(){
-   
     imagen.src = `../Multimedia/img0.png`
     btnNuevoJuego.disabled=true;
+    console.log(typeof palabraIgresada)
     tecladoP()
-    palabraSecretaAleatoria();
-    crearLineas();
+    if(palabraIgresada !== null)
+    {    palabraSecreta = palabraIgresada;
+        crearLineas()
+        console.log("paso False")
+        
+    }else{
+        palabraRandom()
+         crearLineas()
+        console.log("paso true")   
+    }
     vidas = 1;
     acertadas = 0;
+    
     console.log(palabraSecreta);
     const btnTeclado = document.querySelectorAll("#teclado .tecla");
     for (let i = 0; i < btnTeclado.length; i++){
         btnTeclado[i].disabled = false;
      }
-}
-//geEnerar palabra aleatoria e introduce as lineas de la cantidad de letras de la palabra.
-function palabraSecretaAleatoria(){
-    let palabraRandom = palabras[Math.floor(Math.random() * palabras.length)];
-    palabraSecreta = palabraRandom;
+     localStorage.clear()
+     palabraIgresada =localStorage.getItem("palabra")
 }
 
+
+// Genera la palabra random
+const palabraRandom = () => palabraSecreta =  palabras[Math.floor(Math.random() * palabras.length)];
 //Genera las lineas segun la cantidad de letras. ingresando un span en el html.
-function crearLineas(){
-    let parrafo = id("palabraSecreta");
+const crearLineas = () =>{
     parrafo.innerHTML = "";
-    let cantLetra =palabraSecreta.length;
-
-    for( let i = 0; i < cantLetra; i++){
-        const span = document.createElement("span");
-        parrafo.appendChild(span);
-    }
+    for( let i = 0; i < palabraSecreta.length; i++){
+        parrafo.appendChild(document.createElement("span"));
+     }
 }
 
 //funcion Para el teclado y comparacion de las teclas presionadas con las palabras.
-function tecladoP(){
+const tecladoP =() =>{
  for (let i = 0; i < btnTeclado.length; i++){
     btnTeclado[i].addEventListener( "click", clickTeclado);
     }
  }
-//compara el caracter en el boton presionado, con la palabra secreta. la convuerte en mayuscula y si la acerta la pone en el lugar correto.
+//compara el caracter en el boton presionado, con la palabra secreta. la convierte en mayuscula y si la acerta la pone en el lugar correto.
 function clickTeclado(event){
     let palabraSelec = document.querySelectorAll("#palabraSecreta span");
     const button = event.target;
@@ -66,11 +79,11 @@ function clickTeclado(event){
     const letraPresionada = button.innerHTML.toUpperCase();
     const palabraSecrMayus = palabraSecreta.toUpperCase();
     let  acerto = false;
+    
     for(let i = 0; i < palabraSecrMayus.length; i++){
         if ( letraPresionada == palabraSecrMayus[i]){
             palabraSelec[i].innerHTML =letraPresionada;
             acertadas++;
-            console.log(acertadas)
             acerto = true;
         }
     }
@@ -82,15 +95,14 @@ function clickTeclado(event){
     if (vidas == 8){
         finJuego()
         mostrar();
-       
     }
      else if (acertadas == palabraSecreta.length){
         mostrar()
-    finJuego() 
+        finJuego() 
     }
 }
 //funcion que cierra el teclado y restable elboton de juego nuevo.
-function  finJuego(){
+const finJuego = () => {
     const btnTeclado = document.querySelectorAll("#teclado .tecla");
     for (let i = 0; i < btnTeclado.length; i++){
         btnTeclado[i].disabled = true;
@@ -102,23 +114,22 @@ function mostrar(){
     let ganaste = "Felicidades Ganaste";
     let perdio = "Perdiste, la palabra secreta era " + palabraSecreta;
     if(vidas = 8){  
-
-        modal_container.classList.add('show');        
+        modalContainer.classList.add('show');        
         let mensaje = id("mensaje");
         mensaje.innerHTML = perdio;
-        lottie.src = "./Multimedia/99490-skull.mp4";
+        lottie.src = "../Multimedia/99490-skull.mp4";
       
       close.addEventListener('click', () => {
-        modal_container.classList.remove('show');
+        modalContainer.classList.remove('show');
       });
     } if (acertadas == palabraSecreta.length){
-        modal_container.classList.add('show');
+        modalContainer.classList.add('show');
         let mensaje = id("mensaje");
         mensaje.innerHTML = ganaste;
-        lottie.src ="./Multimedia/50743-best.mp4";
+        lottie.src ="../Multimedia/50743-best.mp4";
 
       close.addEventListener('click', () => {
-        modal_container.classList.remove('show');
+        modalContainer.classList.remove('show');
      })
     }
 }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../CSS/mediaQ.css">
     <title>Ahorcado Challenge Alura</title>
 </head>
+
 <body>
     <header>
         <div class="logoImg">
@@ -25,8 +26,9 @@
             </div>
         </div>
         <div class="btnContenedor">
-            
-                <button  type="button" class="btnGuardaPalabra" id="guardarPalabraIn"> Guardar y Empezar</button>
+            <a href="../HTML/iniciojuego.html">
+                <button type="button" onclick="guardarPalabraLocal()" class="btnGuardaPalabra" id="guardarPalabraIn"> Guardar y Empezar</button>
+            </a>
     
             <a class="btnCancelar" id="btnCancelar" href="../index.html">
                  Cancelar
@@ -44,6 +46,7 @@
         <a href="https://www.linkedin.com/in/origuen-cristian/" class="linkd"><img src="../Multimedia/Linkedinpng.png" alt="Logo Linkedin"></a>
 
     </div>
+    <script src="../JS/script.js"></script>
 </body>
     
 </html>
