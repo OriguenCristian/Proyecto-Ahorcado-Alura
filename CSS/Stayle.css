@@ -62,44 +62,30 @@ header .logoImg img{
     padding: 2em;
     margin: 0px auto;
     justify-content: center
-}
-.botonesHome .btnInicioJuego{
+} 
+/* ESTILOS DE BOTONES */
+.btn{ 
     align-self:center;
     background:transparent;
-    padding:1rem 1rem;
-    margin:0.6rem;
-    transition:all .5s ease;
-    color:#41403E;
-    font-size:1.5rem;
-    letter-spacing:1px;
-    outline:none;
     box-sizing:border-box;
     box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    border-color: red;
-}
-.botonesHome .btnIngresarPalabra{   
-    background:transparent;
-    padding:1rem 1rem;
-    margin:0.6rem;
-    transition:all .5s ease;
+    border: solid 2.8px  red;
     color:#41403E;
+    cursor: pointer;
     font-size:1.5rem;
     letter-spacing:1px;
+    margin:0.6rem;
     outline:none;
-    box-sizing:border-box;
-    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    border-color: red;
+    padding:1rem 1rem;
+    transition:all .5s ease;
+    text-decoration: none;
 }
-.btnIngresarPalabra:hover{
+.btn:hover{
     box-shadow:2px 8px 4px -6px
      hsla(0,0%,0%,.3);
 }
-.btnInicioJuego:hover{
-    box-shadow:2px 8px 4px -6px
-     hsla(0,0%,0%,.3);
-}
+/* ---------------------------------------- */
 
 /*estilo pag IngresarPalabra*/
 form{
@@ -135,48 +121,6 @@ form{
     justify-content: center;
     gap: 24px;
 }
-.btnGuardaPalabra{
-    background:transparent;
-    padding:1rem 1rem;
-    margin:0.6rem;
-    transition:all .5s ease;
-    color:#41403E;
-    font-size:1.5rem;
-    letter-spacing:1px;
-    outline:none;
-    box-sizing:border-box;
-    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    border-color: red;
-    cursor: pointer;
-}
-.btnGuardaPalabra:hover{
-    box-shadow:2px 8px 4px -6px
-     hsla(0,0%,0%,.3);
-}
-
-.btnCancelar{
-    background:transparent;
-    padding:1.2rem 1rem;
-    margin:0.6rem;
-    transition:all .5s ease;
-    color:#41403E;
-    font-size:1.5rem;
-    letter-spacing:1px;
-    outline:none;
-    box-sizing:border-box;
-    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    border: solid 2.8px;
-    text-decoration: none;
-    border-color: red;
-    cursor: pointer;
-}
-.btnCancelar:hover{
-    box-shadow:2px 8px 4px -6px
-     hsla(0,0%,0%,.3);
-}
-
 .infoContenedor{
     display: flex;
     justify-content: center;
@@ -189,11 +133,9 @@ form{
     font-weight: 400;
     font-size: 15px;
     line-height: 150%;
-
 }
+
 /*Estilos pag InicioJuego*/
-
-
 .modal-container {
     display: flex;
     background-color: rgba(0, 0, 0, 0.3);
@@ -208,12 +150,10 @@ form{
     width: 100vw;
     transition: opacity 0.3s ease;
   }
-  
-  .show {
+ .show {
     pointer-events: auto;
     opacity: 1;
   }
-  
   .modal {
     background-color: #fff;
     width: 20rem;
@@ -303,42 +243,6 @@ form{
     text-align: center;
     display: inline-block;
 }
-.btnNuevJuego{
-    background:transparent;
-    padding:1rem 1rem;
-    margin:0.5rem;
-    transition:all .5s ease;
-    color:#41403E;
-    font-size:1.5rem;
-    letter-spacing:1px;
-    outline:none;
-    box-sizing:border-box;
-    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    border-color: red;   
-   
-}
-.btnNuevJuego:hover{
-    box-shadow:2px 8px 4px -6px
-     hsla(0,0%,0%,.3);
-}
 
-.btnRendirse{
-    background:transparent;
-    padding:1rem 1rem;
-    margin:0.5rem;
-   
-    transition:all .5s ease;
-    color:#41403E;
-    font-size:1.5rem;
-    letter-spacing:1px;
-    outline:none;
-    box-sizing:border-box;
-    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.541);
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-    border-color: red;
-}
-.btnRendirse:hover{
-    box-shadow:2px 8px 4px -6px
-     hsla(0,0%,0%,.3);
-}
+
+
