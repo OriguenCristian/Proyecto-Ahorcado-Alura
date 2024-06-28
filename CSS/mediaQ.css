@@ -1,5 +1,6 @@
 @media (max-width: 720px){
-
+    body{
+        font-size: medium;
     .containerRwap{
         flex-direction: column;
     }
@@ -8,7 +9,7 @@
     }
     .apareceHorca img {
         width: 100%;
-        height: 60%;
+        height:40%;
     }
     .containerJuego{
         width: 100%;
@@ -19,8 +20,7 @@
         align-content: center;
     }
     #teclado button {
-        font-size: large;
-
+        font-size: medium;
         width: auto;
         height: auto;
         margin: 1px;
@@ -31,25 +31,12 @@
         gap: 0px;
         flex-direction: column;
     }
-    
-    .btnNuevJuego{
-        
-            font-size: x-large;
-            margin: 9px;
-            padding: 8px;
-        
-    }
-    .btnRendirse{
-        font-size: x-large;
-            margin: 9px;
-            padding: 8px;
 
-    }
-    
-    footer{
-        width: max-content;
-        height: 145px;
-        margin: 0px auto;
+    .btn{
+            font-size: medium;
+            margin: 9px;
+            padding: 8px;
+        
     }
 
     .containerFoot{
@@ -60,4 +47,5 @@
         .modal{
             margin: 160px auto;
         }
+}
 }

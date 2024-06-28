@@ -10,14 +10,12 @@ const close = document.getElementById('close');
 const parrafo = document.getElementById("palabraSecreta");
 const imagen = id("imagen");
 const lottie = id("lottieVideo")
- 
 
 let palabraIgresada = localStorage.getItem("palabra");
 let palabraSecreta = "";
 let vidas = 8;
 let acertadas = 0;
    
-
 function id(str){
     return document.getElementById(str);    
 }
@@ -111,25 +109,15 @@ const finJuego = () => {
 };
 //muestra la ventana modal que anuncia si gano o Perdio
 function mostrar(){
-    let ganaste = "Felicidades Ganaste";
-    let perdio = "Perdiste, la palabra secreta era " + palabraSecreta;
     if(vidas = 8){  
         modalContainer.classList.add('show');        
-        let mensaje = id("mensaje");
-        mensaje.innerHTML = perdio;
+        id("mensaje").innerHTML = "Perdiste, la palabra secreta era " + palabraSecreta;
         lottie.src = "../Multimedia/99490-skull.mp4";
-      
-      close.addEventListener('click', () => {
-        modalContainer.classList.remove('show');
-      });
+        close.addEventListener('click', () => modalContainer.classList.remove('show'));
     } if (acertadas == palabraSecreta.length){
         modalContainer.classList.add('show');
-        let mensaje = id("mensaje");
-        mensaje.innerHTML = ganaste;
+        id("mensaje").innerHTML =  "Felicidades Ganaste";
         lottie.src ="../Multimedia/50743-best.mp4";
-
-      close.addEventListener('click', () => {
-        modalContainer.classList.remove('show');
-     })
+        close.addEventListener('click', () => modalContainer.classList.remove('show'));
     }
 }
